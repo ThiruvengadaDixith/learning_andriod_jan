@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">DatabaseExample</string>
+    <string name="add_employee">Add Employee</string>
+    <string name="enter_employee_name">Enter Employee name</string>
+    <string name="select_employee_dept">Select Employee Dept</string>
+    <string name="view_employee">View Employee</string>
+    <string name="enter_employee_salary">Enter Employee salary</string>
+
+
+    <array name="departments">
+        <item>Technical</item>
+        <item>Support</item>
+        <item>Reserch and development</item>
+        <item>marketing</item>
+        <item>Human resources</item>
+    </array>
+</resources>

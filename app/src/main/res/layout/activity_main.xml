@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFA1E2ED"
+    android:backgroundTint="#A1E2ED"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textview_addemployee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="@string/add_employee"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            tools:layout_editor_absoluteX="60dp"
+            tools:layout_editor_absoluteY="132dp" />
+
+        <EditText
+            android:id="@+id/edittext_employeename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:ems="10"
+            android:hint="@string/enter_employee_name"
+            android:includeFontPadding="false"
+            android:inputType="textPersonName"
+            android:lineSpacingExtra="14sp"
+            android:padding="16dp"
+            android:paddingVertical="16dp"
+            android:paddingBottom="16dp"
+             android:textColorHint="#054942"
+            tools:layout_editor_absoluteX="87dp"
+            tools:layout_editor_absoluteY="229dp" />
+
+        <TextView
+            android:id="@+id/textView_selectemployeedept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:paddingBottom="16dp"
+            android:text="@string/select_employee_dept"
+            android:textAllCaps="true"
+            android:textColor="#070707"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="110dp"
+            tools:layout_editor_absoluteY="331dp" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:entries="@array/departments"
+            android:paddingBottom="16dp"
+            tools:layout_editor_absoluteX="74dp"
+            tools:layout_editor_absoluteY="413dp" />
+
+        <EditText
+            android:id="@+id/edittext_employeesalary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:ems="10"
+            android:hint="@string/enter_employee_salary"
+            android:inputType="textPersonName"
+            android:padding="16dp"
+            android:textColorHint="#054942"
+            tools:layout_editor_absoluteX="61dp"
+            tools:layout_editor_absoluteY="494dp" />
+
+        <Button
+            android:id="@+id/button_addemployee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/add_employee" />
+
+        <TextView
+            android:id="@+id/textView_viewemployee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:gravity="center"
+            android:text="@string/view_employee"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:layout_editor_absoluteX="131dp"
+            tools:layout_editor_absoluteY="702dp" />
+    </LinearLayout>
+</RelativeLayout>
