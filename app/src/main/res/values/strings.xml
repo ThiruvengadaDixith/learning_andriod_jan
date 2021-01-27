@@ -5,6 +5,8 @@
     <string name="select_employee_dept">Select Employee Dept</string>
     <string name="view_employee">View Employee</string>
     <string name="enter_employee_salary">Enter Employee salary</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
 
 
     <array name="departments">

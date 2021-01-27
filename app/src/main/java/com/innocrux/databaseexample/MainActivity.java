@@ -2,6 +2,7 @@
 
     import androidx.appcompat.app.AppCompatActivity;
 
+    import android.content.Intent;
     import android.database.sqlite.SQLiteDatabase;
     import android.os.Bundle;
     import android.view.View;
@@ -27,12 +28,9 @@
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
 
-            //table added at onCreate()
+            mDatabase= openOrCreateDatabase("DATABASE_NAME",MODE_PRIVATE,null);
 
-
-            mDatabase= openOrCreateDatabase("employee_db",MODE_PRIVATE,null);
-
-
+                 createTable();
             //intialising all widgets
 
             editTextName = (EditText) findViewById(R.id.edittext_employeename);
@@ -41,14 +39,14 @@
 
             findViewById(R.id.button_addemployee).setOnClickListener(this);
             findViewById(R.id.textView_viewemployee).setOnClickListener(this);
-
+           
         }
 
               // method to create table with create sql query
         public void createTable(){
 
             String createtablesql=" \n" +
-                    "CREATE TABLE employees (\n" +
+                    "CREATE TABLE IF NOT EXISTS employees (\n" +
                     "    id INTEGER NOT NULL CONSTRAINT employees_pk PRIMARY KEY AUTOINCREMENT,\n" +
                     "    name varchar(200) NOT NULL,\n" +
                     "    department varchar(200) NOT NULL,\n" +
@@ -65,13 +63,13 @@
 
                if(name.isEmpty()){
                    editTextName.setError("Name Cant be Empty");
-                   editTextName.requestFocus();
+                   //editTextName.requestFocus();
                    return;
                }
 
                if (salary.isEmpty()){
                    editTextSalary.setError("Salary cant be Empty");
-                   editTextSalary.requestFocus();
+                   //editTextSalary.requestFocus();
                    return;
                }
 
@@ -93,6 +91,7 @@
                     addEmployee();
                     break;
                 case R.id.textView_viewemployee:
+                    startActivity(new Intent(this,EmployeeActivity.class));
                     break;
             }
 
